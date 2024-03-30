@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRR_LAb5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            
+            <div >
+                <ul>
+                    <li>
+                        <a href="./index.html">POST</a>
+                    </li>
+                    <li>
+                        <a href="./get.html">GET</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <form action="localhost://127.0.0.1:5500" method="GET">
+            <div>
+                <label for="surname">Фамилия</label>
+                <br />
+                <input type="text" name="surname" id="surname" required>
+                <div class="invalid-feedback">
+                    Заполните поле!
+                </div>
+            </div>
+            <div>
+                <label for="name">Имя</label>
+                <br />
+                <input type="text" name="name" id="name" required>
+                <div class="invalid-feedback">
+                    Заполните поле!
+                </div>
+            </div>
+            <div>
+                <label for="patronymic">Отчество</label>
+                <br />
+                <input type="text" name="patronymic" id="patronymic" required>
+                <div class="invalid-feedback">
+                    Заполните поле!
+                </div>
+            </div>
+            <div>
+                <label for="email">E-mail</label>
+                <br />
+                <input type="email" name="email" id="email" required>
+                <div class="invalid-feedback">
+                    Заполните поле корректно!
+                </div>
+            </div>
+            <div>
+                <label for="country">Страна</label>
+                <select id="country" name="country" required>
+                    <option>Узбекситан</option>
+                    <option>Россия</option>
+                    <option>Монголия</option>
+                    <option>Алжир</option>
+                    <option>Италия</option>
+                    <option>Испания</option>
+                    <option>Китай</option>
+                    <option>Япония</option>
+                    <option>Зимбабве</option>
+                    <option>Нигерия</option>
+                </select>
+                <div class="invalid-feedback">
+                    Выберите страну!
+                </div>
+            </div>
+            <div>
+                <label>Город</label>
+                <div>
+                    <input type="radio" name="city" id="city1">
+                    <label for="city1">Монако</label>
+                </div>
+                <div>
+                    <input type="radio" name="city" id="city2" checked>
+                    <label for="city2">Алжир</label>
+                </div>
+                <div>
+                    <input type="radio" name="city" id="city3">
+                    <label for="city3">Париж</label>
+                </div>
+                <div>
+                    <input type="radio" name="city" id="city4">
+                    <label for="city4">Москва</label>
+                </div>
+                <div>
+                    <input type="radio" name="city" id="city5">
+                    <label for="city5">Казань</label>
+                </div>
+            </div>
+            <div>
+                <label>Язык</label>
+                <div>
+                    <input type="checkbox" id="lang1">
+                    <label for="lang1">Татарский</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="lang2">
+                    <label for="lang2">Английский</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="lang3">
+                    <label for="lang3">Русский</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="lang4">
+                    <label for="lang4">Испанский</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="lang5">
+                    <label for="lang5">Французский</label>
+                </div>
+            </div>
+            <div>
+                <label>Профессия</label>
+                <br />
+                <select id="profession" name="profession" multiple size="5" required>
+                    <option>Уборщик</option>
+                    <option>Кассир</option>
+                    <option>Менеджер</option>
+                    <option>Маркетолок</option>
+                    <option>Программист</option>
+                    <option>Слесарь</option>
+                    <option>Заместитель</option>
+                    <option>Учитель</option>
+                    <option>Врач</option>
+                    <option>Пожарный</option>
+                </select>
+                <div class="invalid-feedback">
+                    Выберите профессию!
+                </div>
+            </div>
+            <div>
+                <label for="pass">Пароль</label>
+                <br />
+                <input type="password" name="pass" id="pass" minlength="8" maxlength="18" required>
+                <div class="invalid-feedback">
+                    Минимальная длина пароля 8 символов, максимальная - 18 символов!
+                </div>
+            </div>
+            <div>
+                <label for="info">Дополнительная информация</label>
+                <br />
+                <textarea name="info" id="info"></textarea>
+            </div>
+            <input type="hidden" name="student" value="Your_name">
+            <div>
+                <button type="submit">Отправить форму</button>
+                <button type="reset">Очистить форму</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Скрипты -->
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поисковые формы</title>
+</head>
+<body>
+    <h1>Поисковые формы</h1>
+
+    <form action="http://www.yandex.ru/yandsearch" method="get" target="_blank">
+        <label>Поиск на Яндексе:</label>
+        <br />
+        <input type="text" name="text">
+        <button type="submit">Искать</button>
+    </form>
+
+    <form action="https://nova.rambler.ru/search" method="get" target="_blank">
+        <label>Поиск на Рамблере:</label>
+        <br />
+        <input id="rs" type="text" name="text">
+        <input id="rhs" type="hidden" name="query">
+        <button type="submit">Искать</button>
+    </form>
+
+    <form action="https://www.google.com/search" method="get" target="_blank">
+        <label>Поиск в Гугл:</label>
+        <br />
+        <input type="text" name="q">
+        <button type="submit">Искать</button>
+    </form>
+
+    <form action="https://www.filesearch.ru/search/" method="get" target="_blank">
+        <label>Поиск на FileSearch:</label>
+        <br />
+        <input type="text" name="query">
+        <button type="submit">Искать</button>
+    </form>
+
+    <script>
+        let ramblerS = document.querySelector("#rs");
+        let ramblerHS = document.querySelector("#rhs");
+
+        ramblerS.addEventListener("change", e => {
+            console.log(e.target.value)
+            ramblerHS.value = e.target.value;
+        });
+
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                const formData = new FormData(form);
+                const params = new URLSearchParams(formData).toString();
+                const url = form.getAttribute('action') + '?' + params;
+                window.open(url);
+            });
+        });
+    </script>
+</body>
+</html>

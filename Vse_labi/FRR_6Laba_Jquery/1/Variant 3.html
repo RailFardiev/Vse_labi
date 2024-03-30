@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="http://code.jquery.com/jquery-latest.js">
+</script>
+<script>
+
+$(document).ready(function ()
+ {
+   $(".but1").click(function () 
+     {
+       $("[href]").hide();
+     });
+   $(".but2").click(function ()
+     {
+       $("[href]").show();
+     });
+ });
+</script>
+
+</head>
+<body>
+
+<button class="but1">Скрыть</button>
+<button class="but2">Показать</button>
+
+<ul>Не href элемент</ul> 
+
+<ul href="href">
+  <p>Первый href элемент</p>
+  <p>Второй href элемент</p>
+  <p>Третий href элемент</p>
+</ul>
+
+</body>
+</html>

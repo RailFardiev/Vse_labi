@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="http://code.jquery.com/jquery-latest.js">
+</script>
+<script>
+
+$(document).ready(function ()
+ {
+   $("#but1").click(function () 
+     {
+       $("tr:even").hide();
+     });
+   $("#but2").click(function ()
+     {
+       $("tr:even").show();
+     });
+ });
+</script>
+
+</head>
+<body>
+
+<button id="but1">Скрыть</button>
+<button id="but2">Показать</button>
+<table>
+ <tr>
+    <th>Четный</th>
+    <th>Элемент</th>
+  </tr>
+ <tr>
+    <th>Нечетный</th>
+    <th>Элемент</th>
+  </tr>
+ <tr>
+    <th>Четный</th>
+    <th>Элемент</th>
+  </tr>
+ <tr>
+    <th>Нечетный</th>
+    <th>Элемент</th>
+  </tr>
+ <tr>
+    <th>Четный</th>
+    <th>Элемент</th>
+  </tr>
+ <tr>
+    <th>Нечетный</th>
+    <th>Элемент</th>
+  </tr>
+
+</body>
+</html>
